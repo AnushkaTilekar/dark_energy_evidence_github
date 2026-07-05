@@ -76,7 +76,7 @@ def load_supernova_data(csv_input_filepath):
     # we tell our program to run this next block of code. -
     # The "raise" is a Python inbuilt keyword that stops our currently runing "load_supernova_data()" function immediately,
     # and reports an error to the user, rather than continuing on with broken/incomplete data. 
-    # The "ValueError()" is a built-in Python category of error, meaning "something about the value/input you gave me is wrong.""
+    # The "ValueError()" is a built-in Python category of error, meaning "something about the value/input you gave me is wrong."
     # And then gives the user the Error message we have written below.
     if missing:
         raise ValueError(
@@ -97,6 +97,6 @@ def load_supernova_data(csv_input_filepath):
     mu_err = np.asarray(parsed_table['mu_err'], dtype=float)
 
     
-    # Then we send all three arrays back out to whichever variable or funciton called this load_supernova_data() function.
+    # Then we send all three arrays back out to whichever variable or funciton called this "load_supernova_data()" function.
     return z, mu, mu_err
 
