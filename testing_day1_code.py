@@ -1,3 +1,10 @@
+# What this file does: 
+# loads our real DES supernova data, fits the "no dark energy" straight line to the nearby ones, and prints out what it found.
+
+# Output of this file: 
+# nothing is being saved anywhere - just printed text in our terminal, for us to visually check "did this work correctly?"
+
+
 from dark_energy_evidence_package.data_loader import load_supernova_data
 from dark_energy_evidence_package.without_dark_energy import fit_no_dark_energy_line
 
