@@ -105,5 +105,5 @@ def fit_no_dark_energy_line(z, mu, max_redshift_for_nearby_fit=0.1):
     slope, intercept = np.polyfit(z[is_low_redshift], mu[is_low_redshift], deg=1)
     
     
-    # # Then we send oth of htese numbers back out to whichever variable or funciton called this "fit_no_dark_energy_line()" function.
+    # Then we send both of these numbers back out to whichever variable or funciton called this "fit_no_dark_energy_line()" function.
     return slope, intercept
