@@ -25,7 +25,10 @@ import numpy as np
 # "z" and "mu" - are the two required input arrays taken form the initial user input dataset (the .csv file) 
 # in the "data_loader.py" file. 
 # max_redshift_for_nearby_fit=0.1 is a parameter with a default value - meaning if whoever calls this function doesn't specify a max_redshift_for_nearby_fit,
-# it automatically uses 0.1. This is Python's way of making an argument optional.
+# this function automatically uses 0.1. This is Python's way of making an argument optional for the user.
+# Here,
+# z => "redshift"
+# mu => "distance modulus"
 def fit_no_dark_energy_line(z, mu, max_redshift_for_nearby_fit=0.1):
     """
     Fit a linear (No dark energy existence) relation to the low-redshift data.
