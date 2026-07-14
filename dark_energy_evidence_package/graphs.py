@@ -1,6 +1,6 @@
 # This graphs.py file takes the numbers/arrays already computed elsewhere in this package, i,e, 
 # the z, mu from real data; slope, intercept from the no-dark-energy fit; 
-# z_grid, dark_energy_mu from the dark-energy model, and plus a filename to save to, as Inout.
+# z_grid, predicted_mu_with_dark_energy from the dark-energy model, and plus a filename to save to, as Inout.
 
 # Then, this graphs.py file draws two kinds of graphs using a Python plotting library called "matplotlib", 
 # and saves each graph as an .png image file on the user's machine's local disk, 
@@ -23,10 +23,10 @@ import os
 # -----------------------------------------------------------------------------------------
 # Function-1 :
 
-def plot_hubble_diagram(z, mu, slope, intercept, z_grid, dark_energy_mu, save_path="hubble_diagram.png", figure_size=(8, 6), point_size=5, point_transparency=0.4, label_fontsize=12, title_fontsize=14, legend_fontsize=13):
+def plot_hubble_diagram(z, mu, slope, intercept, z_grid, predicted_mu_with_dark_energy, save_path="hubble_diagram.png", figure_size=(8, 6), point_size=5, point_transparency=0.4, label_fontsize=12, title_fontsize=14, legend_fontsize=13):
     """
     Plot the real supernova data received from the user against the 
-    No dark energy model, and With dark energy model.
+    "Without dark energy" Model, and "With dark energy" Model.
 
     Displays the plot interactively, and also automatically saves a copy to local machine folder.
     The path of the saved plot file is printed to the console so the user knows where to locate 
@@ -40,7 +40,7 @@ def plot_hubble_diagram(z, mu, slope, intercept, z_grid, dark_energy_mu, save_pa
         slope (float): Slope of the "Without dark energy Model" line.
         intercept (float): The intercept obtained from calculations for the "Without dark energy Model" line.
         z_grid (array): z_grid is a set of evenly-spaced redshift values spanning from the lowest to highest redshift in the user provided dataset. It exists purely so the two model curves (straight line and ΛCDM) can be drawn as smooth continuous lines across the whole plot, rather than only at the exact redshifts of user's real supernovae dataset.
-        dark_energy_mu (array): The distance modulus that the "With-dark-energy Model" predicts at each redshift value in z_grid. This is what gets drawn as the blue curve.
+        predicted_mu_with_dark_energy (array): The distance modulus that the "With-dark-energy Model" predicts at each redshift value in z_grid. This is what gets drawn as the blue curve.
         save_path (str, optional): Defined by user, decides where to save the generated plot image file on the user's machine. Default is "hubble_diagram.png" in the user's current working directory.
 
     Processing: Plots all three as an overlay on one chart, saves the result as an image file, and attempts to display it on-screen.
@@ -58,8 +58,8 @@ def plot_hubble_diagram(z, mu, slope, intercept, z_grid, dark_energy_mu, save_pa
 
     Without_dark_energy_Model_line = slope*z_grid + intercept
 
-    plt.plot(z_grid, Without_dark_energy_Model_line, color='red', label='No dark energy Model (Straight Line)')
-    plt.plot(z_grid, dark_energy_mu, color='blue', label="With dark energy Model (ΛCDM)")
+    plt.plot(z_grid, Without_dark_energy_Model_line, color='red', label='Without dark energy Model (Straight Line)')
+    plt.plot(z_grid, predicted_mu_with_dark_energy, color='blue', label="With dark energy Model (ΛCDM)")
 
     plt.xlabel("Redshift (z)", fontsize=label_fontsize)
     plt.ylabel("Distance modulus (mu)", fontsize=label_fontsize)
