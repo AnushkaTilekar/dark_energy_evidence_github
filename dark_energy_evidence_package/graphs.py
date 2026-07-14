@@ -39,7 +39,7 @@ def plot_hubble_diagram(z, mu, slope, intercept, z_grid, dark_energy_mu, save_pa
         mu (array): Distance modulus values from the real dataset obained from the user.
         slope (float): Slope of the "Without dark energy Model" line.
         intercept (float): The intercept obtained from calculations for the "Without dark energy Model" line.
-        z-grid (array): z_grid is a set of evenly-spaced redshift values spanning from the lowest to highest redshift in the user provided dataset. It exists purely so the two model curves (straight line and ΛCDM) can be drawn as smooth continuous lines across the whole plot, rather than only at the exact redshifts of user's real supernovae dataset.
+        z_grid (array): z_grid is a set of evenly-spaced redshift values spanning from the lowest to highest redshift in the user provided dataset. It exists purely so the two model curves (straight line and ΛCDM) can be drawn as smooth continuous lines across the whole plot, rather than only at the exact redshifts of user's real supernovae dataset.
         dark_energy_mu (array): The distance modulus that the "With-dark-energy Model" predicts at each redshift value in z_grid. This is what gets drawn as the blue curve.
         save_path (str, optional): Defined by user, decides where to save the generated plot image file on the user's machine. Default is "hubble_diagram.png" in the user's current working directory.
 
@@ -80,13 +80,13 @@ def plot_hubble_diagram(z, mu, slope, intercept, z_grid, dark_energy_mu, save_pa
     # Now, because plt.show() doesn't reliably raise an exception in headless environments,
     # If there is no GUI available on the user's machine, inform the user:
     # 'agg' is the non-interactive backend used in headless environments
-    if matplotlib.get_backend.lower() == 'agg':
-        print(f"ℹ️ Kindly note, the calculated Hubble plot image for your provided dataset cannot be displayed in this current environment as the Plot Display is not available in this environment. But please do not worry. This calcualted Hubble Plot image file for your provided dataset is now automatically saved on your this machine ath this location: {abs_save_path} ")
+    if matplotlib.get_backend().lower() == 'agg':
+        print(f"ℹ️ Kindly note, the calculated Hubble plot image for your provided dataset cannot be displayed in this current environment as the Plot Display is not available in this environment. But please do not worry. This calculated Hubble Plot image file for your provided dataset is now automatically saved on your this machine ath this location: {abs_save_path} ")
         print("😄 Congratulations once again for your success on this project so far! Keep going. I am confident that you can soon take this project to your desired completion stage. I believe in you. 😄👍💯🏆✨")
     
     # Displays the plot only if an interactive backend is available.
     else:
-        print("🎉🥳Yayy! You did it! Congratulation on your progress in this project so far. Here is the calcualted Hubble Diagram plot file for your given dataset-")
+        print("🎉🥳Yayy! You did it! Congratulation on your progress in this project so far. Here is the calculated Hubble Diagram plot file for your given dataset-")
         plt.show()
         print("🏆 I am confident that you can soon take this project to your desired completion stage. I believe in you. Congratulations once again 😄👍👍✨💯 💯")
 
@@ -149,12 +149,12 @@ def plot_residuals(z, mu, slope, intercept, save_path="residuals.png", figure_si
     # If there is no GUI available on the user's machine, inform the user:
     # 'agg' is the non-interactive backend used in headless environments
     if matplotlib.get_backend().lower() == 'agg':
-        print(f"ℹ️ Kindly note, the calculated Residuals plot image for your provided dataset cannot be displayed in this current environment as the Plot Display is not available in this environment. But please do not worry. This calcualted Hubble Plot image file for your provided dataset is now automatically saved on your this machine ath this location: {abs_save_path} ")
+        print(f"ℹ️ Kindly note, the calculated Residuals plot image for your provided dataset cannot be displayed in this current environment as the Plot Display is not available in this environment. But please do not worry. This calculated Hubble Plot image file for your provided dataset is now automatically saved on your this machine ath this location: {abs_save_path} ")
         print("😄 Congratulations once again for your success on this project so far! Keep going. I am confident that you can soon take this project to your desired completion stage. I believe in you. 😄👍💯🏆✨")
 
     # Displays the plot only if an interactive backend is available
     else:
-        print("🎉🥳Yayy! You did it! Congratulation on your progress in this project so far. Here is the calcualted Residuals plot file for your given dataset-")
+        print("🎉🥳Yayy! You did it! Congratulation on your progress in this project so far. Here is the calculated Residuals plot file for your given dataset-")
         plt.show()
         print("🏆 I am confident that you can soon take this project to your desired completion stage. I believe in you. Congratulations once again 😄👍👍✨💯 💯")
     
