@@ -170,16 +170,3 @@ def plot_residuals(z, mu, slope, intercept, save_path="residuals.png", figure_si
     
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
