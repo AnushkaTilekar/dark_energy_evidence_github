@@ -83,16 +83,18 @@ def plot_hubble_diagram(z, mu, slope, intercept, z_grid, predicted_mu_with_dark_
     if matplotlib.get_backend().lower() == 'agg':
         print(f"ℹ️ Kindly note, the calculated Hubble plot image for your provided dataset cannot be displayed in this current environment as the Plot Display is not available in this environment. But please do not worry. This calculated Hubble Plot image file for your provided dataset is now automatically saved on your this machine ath this location: {abs_save_path} ")
         print("😄 Congratulations once again for your success on this project so far! Keep going. I am confident that you can soon take this project to your desired completion stage. I believe in you. 😄👍💯🏆✨")
-    
+        # Close the figure to free memory
+        plt.close()    
+
     # Displays the plot only if an interactive backend is available.
     else:
         print("🎉🥳Yayy! You did it! Congratulation on your progress in this project so far. Here is the calculated Hubble Diagram plot file for your given dataset-")
-        plt.show()
+        plt.show(block=False)
+        plt.pause(0.5)
         print("🏆 I am confident that you can soon take this project to your desired completion stage. I believe in you. Congratulations once again 😄👍👍✨💯 💯")
 
 
-    # Close the figure to free memory
-    plt.close()
+
 
 
 
@@ -124,16 +126,21 @@ def plot_residuals(z, mu, slope, intercept, save_path="residuals.png", figure_si
     """
 
     Without_dark_energy_Model_prediction = slope*z + intercept
+
+    # Here, "mu" is simply the real, measured data from user provided dataset - it has nothing to do with "the With-dark-energy-Model."
     residuals = mu - Without_dark_energy_Model_prediction
 
     plt.figure(figsize=figure_size)
-    plt.scatter(z, residuals, s=point_size, alpha=point_transparency)
-    plt.axhline(0, color='gray', linestyle='-')
+    plt.scatter(z, residuals, s=point_size, alpha=point_transparency, label="Residuals [= (Real data from user provided dataset) - (predicted data of Without-dark-energy-Model)]")
+
+    # Zero Residuals Line (Indicating the residuals if the user provided dataset would have perfectly matched to Without-dark-energy-Model)
+    plt.axhline(0, color='gray', linestyle='-', label="'Without-dark-energy' Model (flattened to zero in this residual space because subtracted from itself)")
 
     plt.xlabel("Redshift(z)", fontsize=label_fontsize)
-    plt.ylabel("Residuals ((Real mu from your provided dataset) - (Without dark energy Model prediction))", fontsize=label_fontsize)
-    plt.title("Residuals: Where Real Data Deviates from the Simple Line", fontsize=title_fontsize)
-
+    plt.ylabel("Residuals \n [(Real mu from your provided dataset) - (Without dark energy Model prediction)]", fontsize=label_fontsize)
+    plt.title("Residuals: Indicating how much the user provided Real Dataset, deviates from the 'Without-dark-energy' Model", fontsize=title_fontsize)
+    plt.legend(fontsize=legend_fontsize)
+    
     # Save the calculated plot figure first (always)
     abs_save_path = os.path.abspath(save_path)
 
@@ -151,16 +158,18 @@ def plot_residuals(z, mu, slope, intercept, save_path="residuals.png", figure_si
     if matplotlib.get_backend().lower() == 'agg':
         print(f"ℹ️ Kindly note, the calculated Residuals plot image for your provided dataset cannot be displayed in this current environment as the Plot Display is not available in this environment. But please do not worry. This calculated Hubble Plot image file for your provided dataset is now automatically saved on your this machine ath this location: {abs_save_path} ")
         print("😄 Congratulations once again for your success on this project so far! Keep going. I am confident that you can soon take this project to your desired completion stage. I believe in you. 😄👍💯🏆✨")
+        # Close the figure to free memory
+        plt.close()
 
     # Displays the plot only if an interactive backend is available
     else:
         print("🎉🥳Yayy! You did it! Congratulation on your progress in this project so far. Here is the calculated Residuals plot file for your given dataset-")
-        plt.show()
+        plt.show(block=False)
+        plt.pause(0.5)
         print("🏆 I am confident that you can soon take this project to your desired completion stage. I believe in you. Congratulations once again 😄👍👍✨💯 💯")
     
 
-    # Close the figure to free memory
-    plt.close()
+
 
 
 
