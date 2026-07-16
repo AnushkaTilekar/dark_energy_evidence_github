@@ -18,3 +18,5 @@ plot_residuals(z, mu, slope, intercept, save_path="testing_day2_residuals.png")
 
 print("Done. Succesfully produced and saved testing_day2_hubble_diagram.png and testing_day2_residuals.png")
 
+import matplotlib.pyplot as plt
+plt.show()
