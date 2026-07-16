@@ -20,3 +20,6 @@ print("Done. Succesfully produced and saved testing_day2_hubble_diagram.png and 
 
 import matplotlib.pyplot as plt
 plt.show()
+
+
+
