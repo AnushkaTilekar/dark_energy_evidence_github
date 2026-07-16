@@ -137,7 +137,7 @@ def plot_residuals(z, mu, slope, intercept, save_path="residuals.png", figure_si
     plt.axhline(0, color='gray', linestyle='-', label="'Without-dark-energy' Model \n (Flattened to zero in this residual space \n because subtracted from itself)")
 
     plt.xlabel("Redshift(z)", fontsize=label_fontsize)
-    plt.ylabel("Residuals \n [(Real mu from user provided dataset) \n - (Without dark energy Model prediction)]", fontsize=label_fontsize)
+    plt.ylabel("Residuals \n [= (Real mu from user provided dataset) \n - (Without dark energy Model prediction)]", fontsize=label_fontsize)
     plt.title("Residuals: \n Indicating how much the user provided Real Dataset deviates \n from the 'Without-dark-energy' Model", fontsize=title_fontsize)
     plt.legend(fontsize=legend_fontsize)
     
