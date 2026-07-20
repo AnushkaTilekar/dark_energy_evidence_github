@@ -15,9 +15,6 @@ At the time of creation and testing of this version of this package, a real DES 
 This package fits a simple "Without-dark-energy" Model hubble line, which happens to be a straight line, to the nearby supernovae, then shows how the distant supernovae in this real dataset systematically deviates from that line.
 
 This is the same visual evidence that led astronomers to propose the existence of dark energy in 1998 [*Add reference Research Paper link here.*]
-)
-
-![Hubble Diagram](hubble_diagram.png)
 
 ## 🔵 What this package basically does? :
 
@@ -31,7 +28,11 @@ Answer:
 
 (4) Then using the results obtained from these 2 fits, this package then plots these two models against the user provided dataset for visual comparison. => This plot is referred to as the "Hubble Diagram" in this package.
 
+![Hubble Diagram](testing_day2_hubble_diagram.png)
+
 (5) Then, this package creates one more plot, called "Residuals", which shows how far the user given dataset falls from the earlier calculated 'WITHOUT dark energy' line prediction. This plot helps the user to visulise how the deviation grows with redshift in their dataset.
+
+![Residuals](testing_day2_residuals.png)
 
 ## 🔵 Package Installtion Instructions:
 
