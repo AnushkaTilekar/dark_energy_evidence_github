@@ -95,10 +95,10 @@ Om0 = (ombh2 + omch2) / (h^2) = (0.02242 + 0.11933) / (0.6766^2) ~= 0.3096
 
 Both values are consistent with the recent CMB-based cosmological measurements. 
 
-**A note on dark matter:**
+**A Note on dark matter:**
 In this version of this package, 'Omo' here represents the *total* matter density (ordinary + dark matter combined). In this versoin of this package, it is assumed that they both behave almost identically in how they influence the universe's expansion history. Hence, here, they are not tracked as separate terms in the underlying Friedmann equations.
 
-**A note on dark energy:**
+**A Note on dark energy:**
 In this version of this package, the Dark Energy is assumed to behave as a cosmological constant (with the equation-of-state parameter w=-1), to be consistent with the standard Lambda-CDM model. 
 
 **A Note For All Users:**
@@ -137,8 +137,8 @@ This project is licensed under the GNU General Public License v3.0. Kindly see t
 ---
 Thank You!
 
-*And Best Wishes for your project! 😄🌟✨*  
-*Please Keep Believing In Your Potential!💛✨.*
+And, Best Wishes for your project! 😄🌟✨ 
+Please Keep Believing In Your Potential!💛✨.
 
 ---
 # 🌟 Author 🌿
