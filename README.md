@@ -37,14 +37,20 @@ Answer:
 ## 🔵 Package Installtion Instructions:
 
 To clone this GitHub repository, and further to install it locally on your machine, kindly give the following commands as input:
+(To install the development version from GitHub:)
 
 ```bash
+# 1. Clone the repository
 git clone https://github.com/AnushkaTilekar/dark_energy_evidence_github.git
+
+# 2. Move into the project folder
 cd dark_energy_evidence_github
+
+# 3. Install the package in development mode
 pip install -e .
 ```
 
-## 🟢 After Installation, To Quickstart this package, kindly give the following commands a input:
+## 🟢 After Installation, To Quickstart this package, Kindly give the following commands a input:
 
 ```python
 from dark_energy_evidence_package.data_loader import load_supernova_data
