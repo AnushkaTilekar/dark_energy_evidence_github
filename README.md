@@ -6,7 +6,7 @@ Anushka Sanjay Tilekar.
 - E-Mail: anushka.tilekar.23@alumni.ucl.ac.uk
 
 ---
-# 🔵 About This 'Dark Energy Evidence' Package:
+# ¶ About This 'Dark Energy Evidence' Package:
 
 This is a Python package that re-creates the classical historical argument for dark energy.
 (Kindly NOTE: 
@@ -16,7 +16,7 @@ This package fits a simple "Without-dark-energy" Model hubble line, which happen
 
 This is the same visual evidence that led astronomers to propose the existence of dark energy in 1998 [*Add reference Research Paper link here.*]
 
-## 🔵 What this package basically does? :
+## ¶ What this package basically does? :
 
 Answer:
 
@@ -34,7 +34,7 @@ Answer:
 
 ![Residuals](testing_day2_residuals.png)
 
-## 🔵 Package Installtion Instructions:
+## ¶ Package Installtion Instructions:
 
 To clone this GitHub repository, and further to install it locally on your machine, kindly give the following commands as input:
 (To install the development version from GitHub:)
@@ -50,7 +50,7 @@ cd dark_energy_evidence_github
 pip install -e .
 ```
 
-## 🟢 After Installation, To Quickstart this package, Kindly give the following commands a input:
+## ¶ After Installation, To Quickstart this package, Kindly give the following commands a input:
 
 ```python
 from dark_energy_evidence_package.data_loader import load_supernova_data
@@ -79,7 +79,7 @@ plot_residuals(z, mu, slope, intercept)
 
 ```
 
-## 🔵 Cosmological Parameters Used:
+## ¶ Cosmological Parameters Used:
 
 In this version of this package, the default cosmological parameters (H0 = 67.66, Om0 = 0.3096) are derived from the same CAMB-based cosmological parameters used in the Author's prior work (H0 = 67.66, ombh2 = 0.02242, omch2 = 0.11933), consistent with the CMB-based measurements.
 
@@ -111,7 +111,7 @@ In this version of this package, the Dark Energy is assumed to behave as a cosmo
 **A Note For All Users:**
 In this version of this package, to improve the user accessibility, the Author has deliberately designed both the 'H0' and the 'Om0' values in the 'predict_distance_modulus_with_dark_energy_presence()' funciton, to be user-adjustable arguments, so that users are not forced or locked into using any pre-set specific values for these critical cosmological parameters.
 
-## 🔵 Input Data Source
+## ¶ Input Data Source
 
 This version of this package was designed using the dataset included in the folder named "dark_energy_evidence_github/downloaded_dataset_files/" on the Github repository available on the Author's GitHub page.
 This datset is taken from the official **DES-SN5YR** (Dark Energy Survey, 5-Year Supernova) data release:
@@ -126,7 +126,7 @@ Further, the file named as "custom_choose_req_DES_data.py" in the "dark_energy_e
 
 However, this file format and data extraction converison script is not part of the current version of installation of this package; - it has been included on the GitHub repository webpage by the Author only for transparency and as a guide for other users (especially students). This conversion script is expected not to be used for any wrong means by any users. Users will be solelly responsible for misuse of the script with their ill-solicitated datasets or with any ill intentions.
 
-## 🔴 Scope And Limitations of this version of this package and GitHub respository:
+## ¶ Scope And Limitations of this version of this package and GitHub respository:
 
 This version of this package is an academic and exploratory tool that demonstrates the classical Linear-vs-Lambda-CDM argument for the dark energy existence, using real supernova dataset. 
 
@@ -134,7 +134,7 @@ This version of this package is an academic and exploratory tool that demonstrat
 
 This verison of this package (or the results obtained from it) should **NOT** be treated as a publication-grade statistical detection pipeline by other users. 
 
-## 🔵 License
+## ¶ License
 
 This project is licensed under the GNU General Public License v3.0. Kindly see the file named "LICENSE" under this repository on the Author's github webpage.
 
