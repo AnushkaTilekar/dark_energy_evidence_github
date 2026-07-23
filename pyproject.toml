@@ -1,0 +1,100 @@
+# =========================================================================================================
+# STEP-1: BUILD THE SYSTEM CONFIGURATION
+
+# This section tells Python what tools to use in order to build this package when we do "pip install [package name]".
+# 'setuptools' = is the standard Python packaging tool.
+# 'build_meta' = tells the 'setuptools' to use its modern build backend.
+# =========================================================================================================
+
+
+[build-system]
+
+# Python needs version of 'setuptools' to be '61' or higher, to build this package.
+requires = ["setuptools>=61.0"]
+
+# Now, we specify the function that does the package building.
+build-backend = "setuptools.build_meta"
+
+
+
+
+
+# =========================================================================================================
+# STEP-2: PROJECT METADATA
+
+# This section contains all the information about this package - 
+# (i) what is this package called ?
+# (ii) who created this package (autor) ?
+# (iii) Is this package dependant on something? What it depends on?
+# etc.
+# All the information mentioned in this section appears on PyPI (- the Python Package Index). 
+# =========================================================================================================
+
+
+[project]
+
+# This is the name that the user types in the "pip install [package name]" statement.
+name = "dark_energy_evidence_package"
+
+# This is the version of this package.
+version = "0.1.0"
+
+# This briefly describes the overall aim of this package.
+description = "Recreates the classical historical argument for dark energy using real supernova data."
+
+# This points the Python to the README file included in the repository.
+# This README file will also be displayed on the PyPI website.
+readme = "README.md"
+
+# This is the SPDX identifier of the license of this verison of this package.
+license = "GPL-3.0-or-later"
+
+# This is the list of Authors of this verison of this package.
+authors = [
+    {name = "ANUSHKA SANJAY TILEKAR", email = "anushka.tilekar.23@alumni.ucl.ac.uk"}
+]
+
+# Here, we specify the minimum latest versoin of Python required in order to use this version of this pacakge.
+requires-python = ">=3.10"
+
+# Here, we explicitly mention all the Python packages that are required as pre-requisites, in order to run this version of this package.
+dependencies = [
+    
+    # For numerical operation:
+    "numpy",
+    
+    # For cosmology models (FlatLambdaCDM)
+    "astropy",
+
+    # For plotting graphs
+    "matplotlib",
+
+    # This one is explicitly only for the data conversion script (not strictly needed by the main package)
+    "pandas",
+]
+
+
+# =========================================================================================================
+# STEP-3: URLs
+
+# This section tells the users where to find this version of this package online on the internet.
+# =========================================================================================================
+
+[project.urls]
+Repository = "https://github.com/AnushkaTilekar/dark_energy_evidence_github"
+
+# =========================================================================================================
+# STEP-4: PACKAGE DISCOVERY
+
+# This section tells the 'subtools' exactly which folders and files to include out of all that 
+# available in the GitHub repository, when preparing the package for download from GitHub to 
+# local machine. 
+# Without this, 'setuptools' by-default tries to inlcude every single file and folder available 
+# within the GitHub repository into the package to download on local machine of the user.
+# =========================================================================================================
+
+[tool.setuptools.packages.find]
+include = ["dark_energy_evidence_package*"]
+
+
+
