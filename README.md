@@ -70,7 +70,7 @@ z, mu, mu_err = load_supernova_data('your_data.csv')
 slope, intercept = fit_no_dark_energy_line(z, mu)
 
 # Predict what a With-dark-energy universe Model would look like on the same dataset
-z_grid = np.linspace(z.min(), z.max(), 200)
+z_grid = np.linspace(z.min(), z.max(), len(z))
 predicted_mu_with_dark_energy = predict_distance_modulus_with_dark_energy_presence(z_grid)
 
 # Visualize both models against the user provided real dataset
