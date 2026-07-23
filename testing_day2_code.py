@@ -9,7 +9,7 @@ z, mu, mu_err = load_supernova_data('downloaded_dataset_files/our_new_custom_DES
 
 slope, intercept = fit_no_dark_energy_line(z, mu)
 
-z_grid = np.linspace(z.min(), z.max(), 200)
+z_grid = np.linspace(z.min(), z.max(), len(z))
 
 dark_energy_mu = predict_distance_modulus_with_dark_energy_presence(z_grid)
 
