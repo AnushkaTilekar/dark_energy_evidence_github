@@ -140,7 +140,7 @@ This project is licensed under the GNU General Public License v3.0. Kindly see t
 
 ---
 
-# ¶ ❗IMPORTANT: How To Cite This Package:
+# ¶ IMPORTANT❗: How To Cite This Package:
 
 If you use this "dark_energy_evidence_package" Python package in your research, teaching, or other academic work, please cite it as:
 
