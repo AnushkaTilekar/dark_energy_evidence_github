@@ -138,6 +138,33 @@ This verison of this package (or the results obtained from it) should **NOT** be
 
 This project is licensed under the GNU General Public License v3.0. Kindly see the file named "LICENSE" under this repository on the Author's github webpage.
 
+---
+
+# ¶ How To Cite This Package:
+
+If you use this "dark_energy_evidence_package" Python package in your research, teaching, or other academic work, please cite it as:
+
+**BibTeX Format:**
+
+```bibtex
+@software{Tilekar_Dark_Energy_Evidence_2026,
+    author = {Anushka Sanjay Tilekar},
+    title = {Dark Energy Evidence: A Python Package for Re-creating the Classical hubble Diagram},
+    year = {2026},
+    version = {0.1.0},
+    url = {https://github.com/AnushkaTilekar/dark_energy_evidence_github},
+    note = {A pedagogical package demonstrating the classical Linear-vs-LambdaCDM argument for the dark energy existence, using real DES-SN5YR supernova data.}
+}
+
+**Plain Text Format:**
+Anushka Sanjay Tilekar. (2026). Dark Energy Evidence: A Python Package for Re-creating the Classical Hubble Diagram (Version 0.1.0). GitHub. https://github.com/AnushkaTilekar/dark_energy_evidence_github
+
+
+**APA Format:**
+Tilekar, A. S. (2026). Dark Energy Evidence: A Python Package for Re-creating the Classical Hubble Diagram (Version 0.1.0) [Python package]. GitHub. https://github.com/AnushkaTilekar/dark_energy_evidence_github
+
+
+---
 
 **Kindly note that, this GitHub repository and all files and folders within it, has been included on the GitHub repository by the Author only for transparency and as a guide for all other users (especially students). These files are expected not to be used for any wrong means by any users. Users will be solely responsible for the misuse of any files or scripts within this GitHub repository and package with their ill-solicitated datasets or with any ill intentions.**
 
