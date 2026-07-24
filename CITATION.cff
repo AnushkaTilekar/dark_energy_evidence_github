@@ -14,8 +14,7 @@
 cff-version: 1.2.0
 
 # Message displayed to users when they click the "Cite" button
-message: "If you use this package in your research,  teaching, or other academic
- or non-academic work, please cite it as follows:"
+message: "If you use this package in your research, teaching, or other academic or non-academic work, please cite it as follows:"
 
 # -----------------------------------------------------------------------------
 # AUTHOR INFORMATION
