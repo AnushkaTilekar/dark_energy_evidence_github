@@ -159,10 +159,12 @@ If you use this "dark_energy_evidence_package" Python package in your research, 
 
 
 **Plain Text Format:**
+
 Anushka Sanjay Tilekar. (2026). Dark Energy Evidence: A Python Package for Re-creating the Classical Hubble Diagram (Version 0.1.0). GitHub. https://github.com/AnushkaTilekar/dark_energy_evidence_github
 
 
 **APA Format:**
+
 Tilekar, A. S. (2026). Dark Energy Evidence: A Python Package for Re-creating the Classical Hubble Diagram (Version 0.1.0) [Python package]. GitHub. https://github.com/AnushkaTilekar/dark_energy_evidence_github
 
 
