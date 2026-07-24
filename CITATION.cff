@@ -1,0 +1,84 @@
+# =============================================================================
+# CITATION FILE FOR DARK ENERGY EVIDENCE PACKAGE
+# =============================================================================
+# This file provides citation metadata for the package.
+# GitHub displays a "Cite this repository" button when this file is present.
+# For more information: https://citation-file-format.github.io/
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# REQUIRED METADATA
+# -----------------------------------------------------------------------------
+
+# Version of the Citation File Format standard used
+cff-version: 1.2.0
+
+# Message displayed to users when they click the "Cite" button
+message: "If you use this package in your research,  teaching, or other academic
+ or non-academic work, please cite it as follows:"
+
+# -----------------------------------------------------------------------------
+# AUTHOR INFORMATION
+# -----------------------------------------------------------------------------
+
+# List of authors
+authors:
+  - family-names: "Tilekar"
+    given-names: "Anushka Sanjay"
+    affiliation: "University College London (UCL), London, United Kingdom"
+    #affiliation: "BRICS Astronomy: 2026 Data Analytics training course (Duration: 10 Weeks)"
+    email: "anushka.tilekar.23@alumni.ucl.ac.uk"
+    orcid: "https://orcid.org/0000-0001-6003-0162"
+
+# -----------------------------------------------------------------------------
+# PACKAGE INFORMATION
+# -----------------------------------------------------------------------------
+
+# Title of the package
+title: "Dark Energy Evidence: A Python Package for Re-creating the Classical Hubble Diagram"
+
+# Version number (matches pyproject.toml)
+version: 0.1.0
+
+# Date this version was released (YYYY-MM-DD)
+date-released: 2026-07-01
+
+# Repository URLs
+url: "https://github.com/AnushkaTilekar/dark_energy_evidence_github"
+repository-code: "https://github.com/AnushkaTilekar/dark_energy_evidence_github"
+
+# -----------------------------------------------------------------------------
+# LICENSE & KEYWORDS
+# -----------------------------------------------------------------------------
+
+# License identifier (SPDX format - matches pyproject.toml)
+license: "GPL-3.0-or-later"
+
+# Keywords for discoverability
+keywords:
+  - dark-energy
+  - cosmology
+  - supernovae
+  - hubble-diagram
+  - lambda-cdm
+  - des-sn5yr
+  - python
+
+# -----------------------------------------------------------------------------
+# OPTIONAL METADATA (uncomment as needed)
+# -----------------------------------------------------------------------------
+
+# Abstract/summary
+abstract: >
+  A Python package that recreates the classical historical argument
+  for dark energy using real DES-SN5YR supernova data.
+
+# # Link to the paper describing the package (if published)
+# references:
+#   - title: "Package paper title"
+#     authors:
+#       - family-names: "Tilekar"
+#         given-names: "Anushka Sanjay"
+#     journal: "Journal Name"
+#     year: 2026
+#     doi: "10.xxxx/xxxxx"
