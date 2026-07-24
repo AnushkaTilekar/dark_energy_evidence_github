@@ -194,7 +194,7 @@ Date: 01 July, 2026.
 
 <!-- This is the syntax to write invisible comments in a HTML or markdown file -->
 
-<!-->
+<!--
 -------------------------------------------------------------
 -------------------------------------------------------------
 About this file: 
