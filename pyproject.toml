@@ -1,9 +1,96 @@
 # =========================================================================================================
+REASON FOR CREATING THIS .TOML FILE:
+
+# (1)
+# "TOML" = stands for "Tom's Obvious, Minimal Language". 
+# It's a configuration file format that's designed to be:
+# (i) Human-readable - you can open it and understand what it says
+# (ii) Simple - no complex syntax
+# (iii) Machine-readable - Python can easily parse it
+# TOML is used by many modern tools (Rust's Cargo, Python's pip, etc.). 
+# The syntax structure for a .TOML file is:
+#
+# text
+# [section]                   # A section header
+# key = "value"               # A key-value pair
+# list = ["item1", "item2"]   # A list of values
+#
+# ---------------------------------------------------------------------------------------------------------------------
+# (2)
+# "pyproject.toml" is the modern standard enforced by Python after the year 2020, for building a package.
+# If you're building a package, you must have this file, and it must be named exactly "pyproject.toml". 
+# Python's build tools look for this specific filename. If you name it something else, they won't find it.
+# The Python packaging ecosystem expects this exact name. 
+# [However, you could have additional files (like setup.py or setup.cfg) in older projects - before the year 2020,
+# but "pyproject.toml" is the modern standard, after the year 2020.]
+#
+# ---------------------------------------------------------------------------------------------------------------------
+# (3)
+# This file is the recipe that tells Python how to package the user requested code, so others can easily install it.
+#
+# Input: 
+# (i) The source code folder (Here: "dark_energy_evidence_package/"), 
+# (ii) The metadata of the source code folder (name, version, etc.), and 
+# (iii) The dependencies list for the source code.
+#
+# Processing: 
+# When user runs the "pip install -e ." command, or the "python -m build" command, 
+# Python's build tools read this "pyproject.toml" file and:
+#       Step-1: Identifies which folders/files belong to the requested package out of all the files and folders availble on the GitHub repository.
+#       Step-2: Then it writes a ".whl" (wheel) file, containing the code that is supposed to go into the package.
+#       Step-3:	Then this file records all the metadata (name, version, dependencies).
+#
+# Output:
+# After the above processing, this file gives out an installable Python package in the ".whl" file format, that can be handled by the user in following ways:
+#   Option-1 (For the Authhor): Uploade the package to PyPI website, using the comamand "twine upload dist/*" .
+#   Option-2 (For the user): Install the package locally on their machine, by using the "pip install -e ." command.
+#   Option-3 (For the user): The package can be installed by anyone else, by using the command "pip install dark_energy_evidence_package"
+#
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#
+# (4)
+# This is what happens when user runs the "pip install -e ." command :-
+#
+#
+#       pip install -e .
+#            │
+#            ▼
+#       Python reads pyproject.toml
+#            │
+#            ▼
+#       Sees: build-backend = "setuptools.build_meta"
+#            │
+#            ▼
+#       Python imports setuptools.build_meta
+#            │
+#            ▼
+#       setuptools reads the package metadata of the user requested package
+#            │
+#            ▼
+#       setuptools creates a ".whl" file (in memory)
+#            │
+#            ▼
+#       pip installs that ".whl" file in editable mode
+#            │
+#            ▼
+#       The package is now available to be used anywhere on the user's system
+#
+# ---------------------------------------------------------------------------------------------------------
+#
+# =========================================================================================================
+
+
+
+# =========================================================================================================
 # STEP-1: BUILD THE SYSTEM CONFIGURATION
 
 # This section tells Python what tools to use in order to build this package when we do "pip install [package name]".
-# 'setuptools' = is the standard Python packaging tool.
-# 'build_meta' = tells the 'setuptools' to use its modern build backend.
+# 'setuptools' = is the standard Python packaging tool. 'Setuptools' is the machinery that actually does the work of 
+#                   packaging the code of this package. Without it, "pip install [package name]" wouldn't know what 
+#                   to do with given code.
+# 'build_meta' = This is telling Python: "When you need to build this package, use the "build_meta" function from the 
+#                   'setuptools' library". 'build-backend' -This is the name of the function/object that Python 
+#                   should call to build your requested package.
 # =========================================================================================================
 
 
@@ -46,7 +133,8 @@ description = "Recreates the classical historical argument for dark energy using
 # This README file will also be displayed on the PyPI website.
 readme = "README.md"
 
-# This is the SPDX identifier of the license of this verison of this package.
+# This is the SPDX ("Software Package Data Exchange") identifier of the license of this verison of this package.
+# It's a standardized way to identify open-source licenses.
 license = "GPL-3.0-or-later"
 
 # This is the list of Authors of this verison of this package.
@@ -96,5 +184,6 @@ Repository = "https://github.com/AnushkaTilekar/dark_energy_evidence_github"
 [tool.setuptools.packages.find]
 include = ["dark_energy_evidence_package*"]
 
+# =========================================================================================================
 
 
