@@ -191,63 +191,67 @@ Date: 01 July, 2026.
 
 
 
-# -------------------------------------------------------------
-# -------------------------------------------------------------
-# About this file: 
-#
-# (1) File name:
-# This "README.md" file was created because, the name "README" has become a convention in the online world. - People interpret it as "This is the first file you should read." 
-# It's not required by law, but many Python package uses it.
-# This is also evident from the fact that - GitHub, PyPI, and many other platforms by-default automatically displays the "README.md" file as the given project's front page.
-# (GitHub platform by-default automatically renders the ".md" format files as nice-looking web pages!)
-#
-# Note that, In the "README.md" file name, the ".md" stands for "Markdown", which is a lightweight markup programming language. 
-# A lightweight markup programming language is the one that allows to write formatted text (headings, bold, italics, code blocks, images, links) in a plain text file format while also allowing to incorporate pieces of code in between, as can be seen in the contents of this "README.md" file. 
-#
-# However, the "README.md" file could also be named as something else, for example, "instructions.md" or "user_guide.md", etc.
-# But, in that case, unfortunately -
-#       (i)  GitHub won't automatically display it on the repository's landing page.
-#       (ii) The PyPI website won't automatically show it as the default package description.
-# If the "README.md" file is renamed as something else, we would need to include a few extra lines of code here and there, to re-direct things to places.
-# But, the good news is = it is not completely impossible!
-# At the end of the day, it is just a piece of code that can be easily manipulated to suit the Author's and the users' comfort. 😄
-#
-# 
-# (2) File Working:
-# "README.md" file is NOT a program - it's a documentation file.
-# It doesn't run, it doesn't compute anything, it doesn't take user input, and it doesn't produce output like a Python function would. Instead, it's a static text file written in Markdown that explains the given Python package to human readers.
-#
-# Input to the file: This README.md file does not take any inputs. It's a static file, not a program.
-# Processing: This README.md file does not process it's contents like a Python program code. Instead it "renders" it's contents. The Markdown parser interprets the formatting syntax and converts it into HTML that displays nicely in a web browser.
-#
-# README.md (plain text with Markdown syntax)
-#        │
-#        ▼
-# GitHub/PyPI reads the file
-#        │
-#        ▼
-# They interpret the Markdown syntax
-#    - # → heading
-#    - ## → subheading
-#    - ```python → code block
-#    - ![alt text](image.png) → image
-#    - **bold** → bold text
-#    - `code` → inline code
-#        │
-#        ▼
-# They render it as a beautiful, formatted web page
-#
-# Output: A formatted, readable web page that helps users understand the given Python package.
-#
-# This README.md file:
-#       (i) Organizes information logically.
-#       (ii) Shows the Python package installation instructions fo this specific package.
-#       (iii) Uses headings to make the informstion visually scannable to the users.
-#       (iv) Provides code blocks users can copy without typing.
-#       (iv) Shows the users how to use this Python package by showing images they would obtain using this package, so that users know what to expect as the output of this overall Python package.
-#       (v) Shows information to the user as to who made this package (i.e. the Author).
-#       (vi) Shows information on how to cite this package in users' own work.
----------------------------------------------------------------
 
+<!-- This is the syntax to write invisible comments in a HTML or markdown file -->
+
+<!-->
+-------------------------------------------------------------
+-------------------------------------------------------------
+About this file: 
+
+(1) File name:
+This "README.md" file was created because, the name "README" has become a convention in the online world. - People interpret it as "This is the first file you should read." 
+It's not required by law, but many Python package uses it.
+This is also evident from the fact that - GitHub, PyPI, and many other platforms by-default automatically displays the "README.md" file as the given project's front page.
+(GitHub platform by-default automatically renders the ".md" format files as nice-looking web pages!)
+
+Note that, In the "README.md" file name, the ".md" stands for "Markdown", which is a lightweight markup programming language. 
+A lightweight markup programming language is the one that allows to write formatted text (headings, bold, italics, code blocks, images, links) in a plain text file format while also allowing to incorporate pieces of code in between, as can be seen in the contents of this "README.md" file. 
+
+However, the "README.md" file could also be named as something else, for example, "instructions.md" or "user_guide.md", etc.
+But, in that case, unfortunately -
+      (i)  GitHub won't automatically display it on the repository's landing page.
+      (ii) The PyPI website won't automatically show it as the default package description.
+If the "README.md" file is renamed as something else, we would need to include a few extra lines of code here and there, to re-direct things to places.
+But, the good news is = it is not completely impossible!
+At the end of the day, it is just a piece of code that can be easily manipulated to suit the Author's and the users' comfort. 😄
+
+
+(2) File Working:
+"README.md" file is NOT a program - it's a documentation file.
+It doesn't run, it doesn't compute anything, it doesn't take user input, and it doesn't produce output like a Python function would. Instead, it's a static text file written in Markdown that explains the given Python package to human readers.
+
+Input to the file: This README.md file does not take any inputs. It's a static file, not a program.
+Processing: This README.md file does not process it's contents like a Python program code. Instead it "renders" it's contents. The Markdown parser interprets the formatting syntax and converts it into HTML that displays nicely in a web browser.
+
+README.md (plain text with Markdown syntax)
+       │
+       ▼
+GitHub/PyPI reads the file
+       │
+       ▼
+They interpret the Markdown syntax
+   - # → heading
+   - ## → subheading
+   - ```python → code block
+   - ![alt text](image.png) → image
+   - **bold** → bold text
+   - `code` → inline code
+       │
+       ▼
+They render it as a beautiful, formatted web page
+
+Output: A formatted, readable web page that helps users understand the given Python package.
+
+This README.md file:
+      (i) Organizes information logically.
+      (ii) Shows the Python package installation instructions fo this specific package.
+      (iii) Uses headings to make the informstion visually scannable to the users.
+      (iv) Provides code blocks users can copy without typing.
+      (iv) Shows the users how to use this Python package by showing images they would obtain using this package, so that users know what to expect as the output of this overall Python package.
+      (v) Shows information to the user as to who made this package (i.e. the Author).
+      (vi) Shows information on how to cite this package in users' own work.
+---------------------------------------------------------------
+-->
 
 
