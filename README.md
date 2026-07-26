@@ -259,7 +259,7 @@ Date: 01 July, 2026.
 
 #### (changelog)
 
-### Verison 0.1.0 (July 2026) - Initial release
+### Version 0.1.0 (July 2026) - Initial release
 
 - Hubble diagram and residuals plotting
 - DES-SN5YR data support
