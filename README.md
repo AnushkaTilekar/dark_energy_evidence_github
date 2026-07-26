@@ -72,6 +72,7 @@ Anushka Sanjay Tilekar.
 # ¶ About This 'Dark Energy Evidence' Package:
 
 This is a Python package that re-creates the classical historical argument for dark energy.
+
 (Kindly NOTE: 
 At the time of creation and testing of this version of this package, a real DES Type-Ia supernova dataset was used.)
 
@@ -91,11 +92,19 @@ Answer:
 
 (4) Then using the results obtained from these 2 fits, this package then plots these two models against the user provided dataset for visual comparison. => This plot is referred to as the "Hubble Diagram" in this package.
 
+- Hubble Diagram for real DES-SN5YR dataset:
+
 ![Hubble Diagram](https://raw.githubusercontent.com/AnushkaTilekar/dark_energy_evidence_github/main/testing_day2_hubble_diagram.png)
+
+> **Note:** The images in this README are hosted on GitHub. If they don't load, please view the README on GitHub: [link](https://github.com/AnushkaTilekar/dark_energy_evidence_github)
 
 (5) Then, this package creates one more plot, called "Residuals", which shows how far the user given dataset falls from the earlier calculated 'WITHOUT dark energy' line prediction. This plot helps the user to visulise how the deviation grows with redshift in their dataset.
 
+- Residuals plot for real DES-SN5YR dataset:
+
 ![Residuals](https://raw.githubusercontent.com/AnushkaTilekar/dark_energy_evidence_github/main/testing_day2_residuals.png)
+
+> **Note:** The images in this README are hosted on GitHub. If they don't load, please view the README on GitHub: [link](https://github.com/AnushkaTilekar/dark_energy_evidence_github)
 
 ## ¶ Package Installtion Instructions:
 
