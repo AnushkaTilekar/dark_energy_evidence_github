@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: dark_energy_evidence_package
-Version: 0.1.1
+Version: 0.1.2
 Summary: Recreates the classical historical argument for dark energy using real supernova data.
 Author-email: ANUSHKA SANJAY TILEKAR <anushka.tilekar.23@alumni.ucl.ac.uk>
 License-Expression: GPL-3.0-or-later
@@ -125,7 +125,18 @@ Answer:
 ## ¶ Package Installtion Instructions:
 
 To clone this GitHub repository, and further to install it locally on your machine, kindly give the following commands as input:
-(To install the development version from GitHub:)
+
+Option-(1) - To install from the PyPI website (Recommended for most users):
+
+```bash
+# pip automatically installs the latest version available on PyPI. You don't need to explicitly specify a version number, unless you want a specific older version.
+pip install dark_energy_evidence_package
+
+```
+
+Option-(2) - To install from the origin source (i.e. directly from the project's main GitHub repository) (This method is for Developers - For development or modifications to the pacakge):
+
+# This method is for if you want to modify the source code or use the very latest version (not yet on PyPI):
 
 ```bash
 # 1. Clone the repository
@@ -137,6 +148,17 @@ cd dark_energy_evidence_github
 # 3. Install the package in development mode
 pip install -e .
 ```
+
+### Which Installtion Option Should You Choose? 
+
+- Answer:
+
+| Your Goal | Recommended Installation Method |
+|-----------|---------------------------------|
+| Just use the package| Option-(1) |
+| Edit the source code | Option-(2) |
+| Modify and contribute to the development of the package | Option-(2) |
+
 
 ## ¶ After Installation, To Quickstart this package, Kindly give the following commands a input:
 
@@ -283,6 +305,10 @@ Date: 01 July, 2026.
 ### README.md File Updates Log :-
 
 #### (changelog)
+
+### Version 0.1.2 (July 2026) - Update
+
+- Added instructions for installtion from PyPI (along with Github) for convenience of different users.
 
 ### Version 0.1.1 (July 2026) - Update
 
