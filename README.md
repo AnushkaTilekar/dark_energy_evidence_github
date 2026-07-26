@@ -110,7 +110,7 @@ Answer:
 
 To clone this GitHub repository, and further to install it locally on your machine, kindly give the following commands as input:
 
-Option-(1) - To install from the PyPI website (Recommended for most users):
+### Option-(1) - To install from the PyPI website (Recommended for most users):
 
 ```bash
 # pip automatically installs the latest version available on PyPI. You don't need to explicitly specify a version number, unless you want a specific older version.
@@ -118,9 +118,9 @@ pip install dark_energy_evidence_package
 
 ```
 
-Option-(2) - To install from the origin source (i.e. directly from the project's main GitHub repository) (This method is for Developers - For development or modifications to the pacakge):
+### Option-(2) - To install from the origin source (i.e. directly from the project's main GitHub repository) (This method is for Developers - For development or modifications to the pacakge):
 
-# This method is for if you want to modify the source code or use the very latest version (not yet on PyPI):
+This method is for if you want to modify the source code or use the very latest version (not yet on PyPI):
 
 ```bash
 # 1. Clone the repository
@@ -133,7 +133,7 @@ cd dark_energy_evidence_github
 pip install -e .
 ```
 
-### Which Installtion Option Should You Choose? 
+### Q. Which Installtion Option Should You Choose? 
 
 - Answer:
 
@@ -289,6 +289,10 @@ Date: 01 July, 2026.
 ### README.md File Updates Log :-
 
 #### (changelog)
+
+### Version 0.1.3 (July 2026) - Update
+
+- Made corrections in the formatting of the Package Installtion instructions section of the README.md file.
 
 ### Version 0.1.2 (July 2026) - Update
 
