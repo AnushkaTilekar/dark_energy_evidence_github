@@ -268,6 +268,10 @@ Date: 01 July, 2026.
 
 #### (changelog)
 
+### Version 0.1.1 (July 2026) - Update
+
+- Changed paths for Hubble diagram plot and Residuals plot diagram form relative to absolute to be compatible with PyPI display for the users.
+
 ### Version 0.1.0 (July 2026) - Initial release
 
 - Hubble diagram and residuals plotting
