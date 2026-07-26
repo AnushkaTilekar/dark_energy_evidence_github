@@ -253,4 +253,15 @@ Anushka Sanjay Tilekar.
 Date: 01 July, 2026.
 
 
+# ---------------------------------------------
 
+### README.md File Updates Log :-
+
+#### (changelog)
+
+### Verison 0.1.0 (July 2026) - Initial release
+
+- Hubble diagram and residuals plotting
+- DES-SN5YR data support
+
+# ----------------------------------------------
