@@ -91,11 +91,11 @@ Answer:
 
 (4) Then using the results obtained from these 2 fits, this package then plots these two models against the user provided dataset for visual comparison. => This plot is referred to as the "Hubble Diagram" in this package.
 
-![Hubble Diagram](testing_day2_hubble_diagram.png)
+![Hubble Diagram](https://raw.githubusercontent.com/AnushkaTilekar/dark_energy_evidence_github/main/testing_day2_hubble_diagram.png)
 
 (5) Then, this package creates one more plot, called "Residuals", which shows how far the user given dataset falls from the earlier calculated 'WITHOUT dark energy' line prediction. This plot helps the user to visulise how the deviation grows with redshift in their dataset.
 
-![Residuals](testing_day2_residuals.png)
+![Residuals](https://raw.githubusercontent.com/AnushkaTilekar/dark_energy_evidence_github/main/testing_day2_residuals.png)
 
 ## ¶ Package Installtion Instructions:
 
