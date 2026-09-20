@@ -142,7 +142,7 @@ authors = [
     {name = "ANUSHKA SANJAY TILEKAR", email = "anushka.tilekar.23@alumni.ucl.ac.uk"}
 ]
 
-# Here, we specify the minimum latest versoin of Python required in order to use this version of this pacakge.
+# Here, we specify the minimum latest version of Python required in order to use this version of this pacakge.
 requires-python = ">=3.10"
 
 # Here, we explicitly mention all the Python packages that are required as pre-requisites, in order to run this version of this package.
