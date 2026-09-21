@@ -124,7 +124,7 @@ build-backend = "setuptools.build_meta"
 name = "dark_energy_evidence_package"
 
 # This is the version of this package.
-version = "0.1.3"  # (Increment from 0.1.2 to 0.1.3)
+version = "0.1.4"  # (Increment from 0.1.3 to 0.1.4)
 
 # This briefly describes the overall aim of this package.
 description = "Recreates the classical historical argument for dark energy using real supernova data."

@@ -245,7 +245,7 @@ If you use this "dark_energy_evidence_package" Python package in your research, 
     author = {Anushka Sanjay Tilekar},
     title = {Dark Energy Evidence: A Python Package for Re-creating the Classical hubble Diagram},
     year = {2026},
-    version = {0.1.3},
+    version = {0.1.4},
     url = {https://github.com/AnushkaTilekar/dark_energy_evidence_github},
     note = {A pedagogical package demonstrating the classical Linear-vs-LambdaCDM argument for the dark energy existence, using real DES-SN5YR supernova data.}
 }
@@ -254,12 +254,12 @@ If you use this "dark_energy_evidence_package" Python package in your research, 
 
 **Plain Text Format:**
 
-Anushka Sanjay Tilekar. (2026). Dark Energy Evidence: A Python Package for Re-creating the Classical Hubble Diagram (Version 0.1.3). GitHub. https://github.com/AnushkaTilekar/dark_energy_evidence_github
+Anushka Sanjay Tilekar. (2026). Dark Energy Evidence: A Python Package for Re-creating the Classical Hubble Diagram (Version 0.1.4). GitHub. https://github.com/AnushkaTilekar/dark_energy_evidence_github
 
 
 **APA Format:**
 
-Tilekar, A. S. (2026). Dark Energy Evidence: A Python Package for Re-creating the Classical Hubble Diagram (Version 0.1.3) [Python package]. GitHub. https://github.com/AnushkaTilekar/dark_energy_evidence_github
+Tilekar, A. S. (2026). Dark Energy Evidence: A Python Package for Re-creating the Classical Hubble Diagram (Version 0.1.4) [Python package]. GitHub. https://github.com/AnushkaTilekar/dark_energy_evidence_github
 
 
 ---
@@ -289,6 +289,10 @@ Date: 01 July, 2026.
 ### README.md File Updates Log :-
 
 #### (changelog)
+
+### Version 0.1.4 (September 2026) - Update
+
+- Made corrections in the formatting of the Package Installtion instructions section of the README.md file.
 
 ### Version 0.1.3 (July 2026) - Update
 
