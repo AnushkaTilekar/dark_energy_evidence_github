@@ -175,12 +175,78 @@ root_doc = "index"
 
 # -------------
 # [2.v.A]
+
+# A "path", in general, is just the address of a file or folder on 
+# our computer. Like a postal address for a house, a path tells 
+# the computer where something lives. Nothing fancy - it's just a 
+# text string that describes a location.
+# But, if a path is just text, then to do any of these things-
+# (i) Call the folder it lives in,
+# (ii) Call just the filename,
+# (iii) Combine two paths into one,
+# (iv) Check if the file actually exists,
+# (v) Turn a short path into a full one,
+# etc.
+# we would need to call a separate helper function and pass the 
+# text into it. 
+
+# Now, instead of treating the path as dumb text that we pass to 
+# helper functions, an in-built module of the Python, 
+# called as "pathlib", turns the path into a smart thing 
+# (referred to as an "object") that knows how to do those actions 
+# itself.
+# E.g.:
+# from pathlib import Path
+# my_path = Path("/home/anushka/projects/notes.txt")
+# folder = my_path.parent          # get the folder
+# name   = my_path.name            # get the filename
+# exists = my_path.exists()        # does it exist?
+
 from pathlib import Path
 
 # (i) pathlib = Python module
+#                - It is a standard Python module for working with 
+#                  file and folder paths.
+#                - This module was added to Python in version 3.4 (2014), 
+#                  as a replacement for the older, clunkier ways of 
+#                  handling paths.
+#                - Before pathlib, we would work with paths as 
+#                  plain strings and use a different module, 
+#                  called "os.path", to manipulate them.
+#                - It is Cross-platform. The same code works on 
+#                  Windows, Mac, and Linux without special-casing 
+#                  separators.
 # (ii) Path = A class from the Python's module named "pathlib". 
-#              It represents a file path as an object with useful 
-#              methods.
+#              - It represents a file path as an object, and is 
+#                compatible with many useful methods.
+# The dot (.) is what makes it a method call. 
+# "something.method()" means "ask that specific thing to do that action."
+# A sample of the methods that can be used with every "Path" object:
+# (1) / (operator)          - Joins paths	
+#                               E.g.:  Path("/a") / "b" → /a/b
+# (2) .parent               - The folder containing this path
+#                               E.g.:  Path("/a/b/c.txt").parent → /a/b
+# (3) .name                 - The final part of the path
+#                               E.g.:  Path("/a/b/c.txt").name → c.txt
+# (4) .stem                 - Filename without extension
+#                               E.g.:  Path("/a/b/c.txt").stem → c
+# (5) .suffix               - The extension
+#                               E.g.:  Path("/a/b/c.txt").suffix → .txt
+# (6) .resolve()            - Converts to an absolute path, removing ".."
+#                               E.g:   Path("./foo").resolve() → /current/dir/foo
+# (7) .exists()             - Whether the path exists
+#                               E.g.:  Path("/etc/hosts").exists() → True
+# (8) .is_file()            - Whether it's a file format	
+#                               → True / False
+# (9) .is_dir()             - Whether it's a folder format 
+#                               →  True / False
+# (10) .mkdir()             - Create the folder
+#                               → Creates it if missing
+# (11) .read_text()         - Read the file as text
+#                               → Returns a string
+# (12) .write_text("...")   - Write text to the file
+# (13) .iterdir()           - Lists what's inside a folder
+#                               → Returns an iterator of Path objects
 
 # -------------
 # [2.v.B]
@@ -297,10 +363,152 @@ except ImportError:
 # [2.v.C]
 _pyproject_path = Path(__file__).resolve().parent.parent / "pyproject.toml"
 
+# Example -
+#
+# Assuming this "conf.py" file lives at- 
+# "/mnt/e/brics_project/dark_energy_evidence_github/docs_for_ReadTheDocs_and_Sphinx/conf.py"
+# 
+# Then the results we get from each element of this line of code are 
+# as follows -
+#
+# (i) The dot (.) is what makes it a method call. 
+#      - "something.method()" 
+#         means "ask that specific thing to do that action."
+#
+# (ii) _pyproject_path
+#      - The variable could be named "x" and Sphinx wouldn't care. 
+#        This Name exist for humans.
+#      - (ii.1) _ (leading underscore)
+#              In Python, a leading underscore is a convention meaning,
+#              "This is a helper variable, not part of the file's 
+#              interface. This name is for internal use, 
+#              don't rely on it from outside.
+#              i.e., This is internal - not part of the public API."
+#              So Why use it here? 
+#              Because this "conf.py" is a configuration file that 
+#              Sphinx reads. The variables inside it (like project, 
+#              author, extensions, html_theme) are what Sphinx looks 
+#              for by name. 
+#              Variables starting with "_" are just helpers that exist 
+#              to compute the real ones.
+#      - (ii.2) pyproject
+#              It points at the "pyproject.toml" file.
+#      - (ii.3) The "_path" suffix
+#               This tells the reader that the variable holds a path 
+#               (a location), not the file's contents.
+#      - The three parts [(ii.1), (ii.2), (ii.3)] together they make 
+#        one line of code say: 
+#        "internal helper; points at the "pyproject.toml" file; 
+#         holds a location, not contents."
+#      - This temporary variable "_pyproject_path" is used by this
+#        "conf.py" file to calculate nother temporary variable called 
+#        "_pyproject_data" in the code line below: 
+#         "
+#          with open(_pyproject_path, "rb") as f:
+#            _pyproject_data = tomllib.load(f)
+#         "
+#        And this temporary variable " _pyproject_data" is then used by
+#        this "conf.py" file to calculate the varibale "release" in the
+#        code line below:
+#        "
+#        release = _pyproject_data["project"]["version"]
+#        "
+#        And this "release" varibale is the one which is read by Sphinx,
+#        not the "_pyproject_path" or the "_pyproject_data", those are
+#        read by this "conf.py" file.
+#        E.g.:
+#        Think of how you solve a maths problem:
+#        Given: 3x + 4 = 19
+#               3x = 19 - 4      ← intermediate step (not the final answer)
+#               3x = 15          ← intermediate step
+#                x = 5            ← final answer
+#        Nobody circles the intermediate steps. They exist so the 
+#        final answer can be reached. Once you have x = 5, you don't 
+#        care about 3x = 15 anymore.
+#        The temporary local varible "_pyproject_path" is exactly like 
+#        "3x = 15". It's a step along the way to computing the global 
+#        varibale called "release". Sphinx only cares about the varibale 
+#        called "release".
+#        The names without underscores are what Sphinx reads. 
+#        The names with underscores are what the file uses internally. 
+#        A subtle point: Sphinx would ignore them anyway.:
+#        Even if we named it "pyproject_path" 
+#        (i.e., no leading underscore), Sphinx still wouldn't read it. 
+#        Sphinx only looks for a specific list of variable names it 
+#        recognises - project, author, release, version, extensions, 
+#        html_theme, and a few dozen others. Everything else in 
+#        this "conf.py" file is simply ignored. 
+#        So the underscore is purely a courtesy to human readers. 
+#        It doesn't affect what Sphinx does. 
+#
+# (ii) __file__	
+#      - A special variable Python automatically sets to the path 
+#        of the current file (conf.py itself)
+#
+# (iii) Path(__file__)
+#      - Wraps the path of this "conf.py" file, which is a string 
+#            Python sets automatically, into a 'Path' object
+#      - Result:
+#            Path('/mnt/e/brics_project/dark_energy_evidence_github/docs_for_ReadTheDocs_and_Sphinx/conf.py')
+# 
+# (iv) .resolve()
+#        - Converts the value of above Path pbject to a full absolute path,
+#             resolving any ".." or symlinks. [A symlink 
+#             (short for "symbolic link") is a file that points to 
+#             another file or folder - like a shortcut.]
+#             i.e. Ask it to become an absolute path
+#        - Result:
+#             Path('/mnt/e/.../docs_for_ReadTheDocs_and_Sphinx/conf.py') 
+#             considerd propperly as-
+#             Path('/mnt/e/brics_project/dark_energy_evidence_github/docs_for_ReadTheDocs_and_Sphinx/conf.py')
+#
+# (v) .parent
+#        - The folder containing "conf.py" file
+#        - Result:
+#             docs_for_ReadTheDocs_and_Sphinx
+#
+# (vi) .parent again
+#       - One level further up
+#       - Result:
+#             The repository root folder
+#
+# (vii) / "pyproject.toml"
+#      - Joins the filename onto the path i.e., Appends the filename.
+#      - The "/" here isn't division - it's Python's "pathlib" module's 
+#          way of joining paths.
+#      - Result: 
+#             Path('/mnt/e/.../dark_energy_evidence_github/pyproject.toml')
+#
+#
+# The whole point of building the path from "__file__" is to make this 
+# repository work on anyone's machine.
+# The end result is a Path object pointing at the right "pyproject.toml" 
+# file, no matter where the user's installed repository lives or how 
+# deeply nested it is.  
+
+# Net effect: 
+# This line constructs the full path to "pyproject.toml" file at the 
+# repo root, no matter where Sphinx is run from.
+
+# Why not just write "../pyproject.toml"? 
+# Because it would work only if Sphinx were always run from inside 
+# "docs_for_ReadTheDocs_and_Sphinx/". 
+# But, If user ever run "make html" command from somewhere else, 
+# the relative path would break. 
+# Hence, Using "__file__" makes it robust.
+
 # -------------
 # [2.v.D]
+#
 with open(_pyproject_path, "rb") as f:
+# "open()" accepts a Path object just as happily as a plain string.
+# This is one of the things Python added in 3.6, to make pathlib fit 
+# naturally into existing code.
+
     _pyproject_data = tomllib.load(f)
+#   ^ holds the actual contents of the "pyproject.toml" file. 
+
+
 
 # -------------
 # [2.v.E]
